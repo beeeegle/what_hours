@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  web-page-deploy:
+  build:
       runs-on: ubuntu-latest
       steps:
           - name: checkout code
@@ -24,7 +24,7 @@ jobs:
             with:
               path: build
   deploy:
-      needs: web-page-deploy
+      needs: build
       permissions:
           pages: write
           id-token: write
