@@ -27,5 +27,5 @@ jobs:
             uses: peaceiris/actions-gh-pages@v3
             with:
               # Deploy keysやPersonal access Tokensも使用可能
-              github_token: ${{ secrets.GITACTIONS_DEPLOY_KEYHUB_TOKEN }}
+              github_token: ${{ secrets.ACTION_TOKEN }}
               publish_dir: ./dist
