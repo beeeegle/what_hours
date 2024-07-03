@@ -22,7 +22,7 @@ jobs:
           - name: upload dist to gh-pages
             uses: actions/upload-pages-artifact@v1
             with:
-              path: build
+              path: /tmp
   deploy:
       needs: build
       permissions:
