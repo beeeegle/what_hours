@@ -19,13 +19,8 @@ jobs:
           - name: build
             run: |
               yarn build
-        #   - name: upload dist to gh-pages
-        #     uses: actions/upload-pages-artifact@v1
-        #     with:
-        #       path: /tmp
           - name: Push gh-pages branch
             uses: peaceiris/actions-gh-pages@v3
             with:
-              # Deploy keysやPersonal access Tokensも使用可能
               github_token: ${{ secrets.ACTION_TOKEN }}
               publish_dir: ./dist
